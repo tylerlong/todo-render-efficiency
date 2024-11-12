@@ -2,7 +2,7 @@
 
 <img src="icon.svg" width="256" />
 
-I've started this project, "Todo Render Efficiency," to compare different state management libraries and identify which ones best reduce unnecessary renders in a React todo app.
+I've started this project to compare different state management libraries and identify which ones best reduce unnecessary renders in a React todo app.
 
 ## Why This Matters
 
