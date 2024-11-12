@@ -16,14 +16,14 @@ What’s your favorite state management library, and why do you choose it? We’
 
 We haven’t finished testing all the libraries yet. It’s a work in progress.
 
-- zustand
+- [zustand](https://github.com/pmndrs/zustand)
+  - haven't tested
 - [jotai](https://github.com/pmndrs/jotai)
   - passed 1/5 tests ❌
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/jotai)
 - [valtio](https://github.com/pmndrs/valtio)
   - passed 0/5 tests ❌
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/valtio)
-- koota
 - [manate](https://github.com/tylerlong/manate)
   - passed 5/5 tests ✅
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/manate)
