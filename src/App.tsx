@@ -1,7 +1,8 @@
-import * as React from 'react'
-import { actions, filters, Todo, useFilter, useTodos } from './store'
+import * as React from "react";
+import { actions, filters, Todo, useFilter, useTodos } from "./store";
 
 function App() {
+  console.log("App render");
   return (
     <div className="App">
       <h1>Todo</h1>
@@ -9,15 +10,16 @@ function App() {
       <TodoList />
       <FilterRow />
     </div>
-  )
+  );
 }
 
 function AddTodoInput() {
-  const [value, setValue] = React.useState('')
+  console.log("AddTodoInput render");
+  const [value, setValue] = React.useState("");
 
   function handleSubmit() {
-    actions.addTodo({ name: value })
-    setValue('')
+    actions.addTodo({ name: value });
+    setValue("");
   }
 
   return (
@@ -29,63 +31,69 @@ function AddTodoInput() {
       />
       <button onClick={handleSubmit}>Add Todo</button>
     </div>
-  )
+  );
 }
 
 function TodoList() {
-  const todos = useTodos()
+  console.log("TodoList render");
+  const todos = useTodos();
   return (
     <div>
       {todos.map((todo) => (
         <TodoRow key={todo.id} todo={todo} />
       ))}
     </div>
-  )
+  );
 }
 
 function TodoRow({ todo }: { todo: Todo }) {
+  console.log("TodoRow render");
   function handleCheckBoxChange(event: React.ChangeEvent<HTMLInputElement>) {
-    actions.toggleTodo(todo.id, event.target.checked)
+    actions.toggleTodo(todo.id, event.target.checked);
   }
 
   function handleDeleteClick() {
-    actions.removeTodo(todo.id)
+    actions.removeTodo(todo.id);
   }
 
   return (
     <div
       style={{
-        display: 'flex',
-        alignItems: 'center',
-        textDecoration: todo.completed ? 'line-through' : 'initial',
-      }}>
+        display: "flex",
+        alignItems: "center",
+        textDecoration: todo.completed ? "line-through" : "initial",
+      }}
+    >
       <input type="checkbox" onChange={handleCheckBoxChange} />
       <h2>{todo.name}</h2>
-      <h2 style={{ color: 'red', paddingLeft: 10 }} onClick={handleDeleteClick}>
+      <h2 style={{ color: "red", paddingLeft: 10 }} onClick={handleDeleteClick}>
         X
       </h2>
     </div>
-  )
+  );
 }
 
 function FilterRow() {
-  const activeFilter = useFilter()
+  console.log("FilterRow render");
+  const activeFilter = useFilter();
 
   return (
     <div style={{ padding: 20 }}>
       {filters.map((filter) => (
         <button
           style={{
-            fontWeight: activeFilter === filter ? 'bold' : 'normal',
+            fontWeight: activeFilter === filter ? "bold" : "normal",
           }}
           onClick={() => {
-            actions.toggleFilter(filter)
-          }}>
+            actions.toggleFilter(filter);
+          }}
+          key={filter}
+        >
           {filter}
         </button>
       ))}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
