@@ -12,13 +12,18 @@ We add a key to `FilterRow` buttons list, otherwise React will complain.
 
 We add a `console.log` to EVERY component, for example `console.log("TodoRow render");`
 
+## How to run
+
+```
+yarn install
+yarn dev
+```
+
 ## Tests
 
 For test rules and details, please go to the <a href="https://github.com/tylerlong/todo-state-management" target="_blank">main branch</a>.
 
 ## Result (passed 0 / 5)
-
-Valtio failed all the Render Optimization Tests:
 
 - test 1 ❌
 - test 2 ❌
