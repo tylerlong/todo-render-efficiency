@@ -6,7 +6,7 @@ We will build a todo app with each statement library, and each of them will be i
 
 For those libraries that provide examples for a todo app, we will the example app provided with minimal modifications to add loggings.
 
-Below are the libraries we included(ordered by stars on GitHub):
+Below are the libraries we included (ordered by number of stars on GitHub):
 
 - zustand
 - jotai
