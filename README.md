@@ -1,23 +1,32 @@
 # Todo State Management
 
-This is a repo to compare different state management libraries.
+I've started this project, Todo State Management, with the goal of comparing various state management libraries to see which can best optimize render cycles in a React todo app.
+By reducing unnecessary re-renders, we can save computing resources, conserve energy, and contribute to a more environmentally sustainable approach to software development.
 
-We will build a todo app with each statement library, and each of them will be in a separate branch.
+## Why this matters?
 
-For those libraries that provide examples for a todo app, we will the example app provided. We will make some modifications to make them object the common rules mentioned below.
+Every render in a React app consumes power, especially when multiplied across many devices and users.
+By carefully choosing and configuring state management libraries that minimize renders, we can make our applications more efficient, which not only improves user experience but also aligns with a greener approach to development.
 
-Below are the libraries we included (ordered by number of stars on GitHub):
+## PRs are welcome!
+
+We will build a todo app with each state management library, and each of them will be in a separate branch.
+For those libraries that provide examples for a todo app, we will the example app provided.
+We may make some modifications to them in order to conduct the tests below.
+
+To state management library authors: feel free to creaet a PR to add your library.
+It doesn't need to be famous to be added.
+
+## Testing results (ordered by number of stars on GitHub)
 
 - zustand
-- jotai
-  - [todo app](https://github.com/tylerlong/todo-state-management/tree/jotai)
-- valtio
-  - [todo app](https://github.com/tylerlong/todo-state-management/tree/valtio)
+- [jotai](https://github.com/pmndrs/jotai)
+  - passed 1/5 tests
+  - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/jotai)
+- [valtio](https://github.com/pmndrs/valtio)
+  - passed 0/5 tests
+  - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/valtio)
 - koota
-
-For now all of them are from https://github.com/pmndrs. It's quite interesting to see a GitHub organization to release 4 state management libraries to "compete" with each other.
-
-In the future, I will add more state management libraries. PRs are very welcome! To state management library authors: feel free to creaet a PR to add your library. It doesn't need to be famous to be added.
 
 ## Common rules
 
