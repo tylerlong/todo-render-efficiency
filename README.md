@@ -19,6 +19,8 @@ It doesn't need to be famous to be added.
 
 ## Testing results (ordered by number of stars on GitHub)
 
+We haven’t finished testing all the libraries yet. It’s a work in progress.
+
 - zustand
 - [jotai](https://github.com/pmndrs/jotai)
   - passed 1/5 tests
@@ -27,6 +29,7 @@ It doesn't need to be famous to be added.
   - passed 0/5 tests
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/valtio)
 - koota
+- manate
 
 ## Common rules
 
