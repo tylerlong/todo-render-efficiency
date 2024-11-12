@@ -1,6 +1,7 @@
 # Jotai
 
-A todo app powered by Jotai. The source code is copied from https://github.com/pmndrs/jotai/tree/main/examples/todos.
+A todo app powered by Jotai.
+The source code is copied from https://github.com/pmndrs/jotai/tree/main/examples/todos.
 
 ## Modifications
 
