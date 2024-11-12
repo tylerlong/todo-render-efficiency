@@ -1,7 +1,6 @@
 # Valtio
 
-A todo app using valtio as state management library.
-
+A todo app powered by [valtio](https://github.com/pmndrs/valtio).
 The code is copied from: https://github.com/pmndrs/valtio/tree/main/examples/todo
 
 ## Modifications
