@@ -10,6 +10,7 @@ Below are the libraries we included (ordered by number of stars on GitHub):
 
 - zustand
 - jotai
+  - [todo app](https://github.com/tylerlong/todo-state-management/tree/jotai)
 - valtio
   - [todo app](https://github.com/tylerlong/todo-state-management/tree/valtio)
 - koota
