@@ -15,49 +15,55 @@ import { Todo, TodoList } from './store';
 const { Text, Title } = Typography;
 
 const App = auto((props: { todoList: TodoList }) => {
+  console.log('render App');
   const { todoList } = props;
-  const [text, setText] = React.useState('');
   return (
     <>
       <Title>Manate</Title>
       <Space direction="vertical">
-        <Space>
-          <Input value={text} onChange={(e) => setText(e.target.value)}></Input>
-          <Button
-            onClick={() => {
-              todoList.add(text);
-              setText('');
-            }}
-          >
-            Add
-          </Button>
-        </Space>
+        <InputComponent todoList={todoList} />
         <Divider />
-        {todoList.filteredTodos.map((todo) => (
-          <TodoComponent key={todo.id} todo={todo} />
-        ))}
+        <TodoListComponent todoList={todoList} />
         <Divider />
-        <Space>
-          Show:{' '}
-          <Select
-            style={{ width: 120 }}
-            options={[
-              { value: 'all', label: 'All' },
-              { value: 'complete', label: 'Complete' },
-              { value: 'incomplete', label: 'Incomplete' },
-            ]}
-            value={todoList.filter}
-            onChange={(value) => {
-              todoList.filter = value;
-            }}
-          ></Select>
-        </Space>
+        <FilterComponent todoList={todoList} />
       </Space>
     </>
   );
 });
 
+const InputComponent = auto((props: { todoList: TodoList }) => {
+  console.log('render InputComponent');
+  const { todoList } = props;
+  const [text, setText] = React.useState('');
+  return (
+    <Space>
+      <Input value={text} onChange={(e) => setText(e.target.value)}></Input>
+      <Button
+        onClick={() => {
+          todoList.add(text);
+          setText('');
+        }}
+      >
+        Add
+      </Button>
+    </Space>
+  );
+});
+
+const TodoListComponent = auto((props: { todoList: TodoList }) => {
+  console.log('render TodoListComponent');
+  const { todoList } = props;
+  return (
+    <Space direction="vertical">
+      {todoList.filteredTodos.map((todo) => (
+        <TodoComponent key={todo.id} todo={todo} />
+      ))}
+    </Space>
+  );
+});
+
 const TodoComponent = auto((props: { todo: Todo }) => {
+  console.log('render TodoComponent');
   const { todo } = props;
   return (
     <Space>
@@ -71,6 +77,28 @@ const TodoComponent = auto((props: { todo: Todo }) => {
       <Button size="small" onClick={() => todo.remove()}>
         Remove
       </Button>
+    </Space>
+  );
+});
+
+const FilterComponent = auto((props: { todoList: TodoList }) => {
+  console.log('render FilterComponent');
+  const { todoList } = props;
+  return (
+    <Space>
+      Show:{' '}
+      <Select
+        style={{ width: 120 }}
+        options={[
+          { value: 'all', label: 'All' },
+          { value: 'complete', label: 'Complete' },
+          { value: 'incomplete', label: 'Incomplete' },
+        ]}
+        value={todoList.filter}
+        onChange={(value) => {
+          todoList.filter = value;
+        }}
+      ></Select>
     </Space>
   );
 });
