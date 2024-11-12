@@ -1,17 +1,5 @@
-# Todo State Management
+# Todo app with valtio as state management library
 
-This is a repo to compare different state management libraries.
+The code is copied from: https://github.com/pmndrs/valtio/tree/main/examples/todo
 
-We will build a todo app with each statement library, and each of them will be in a separate branch.
-
-For those libraries that provide examples for a todo app, we will the example app provided with minimal modifications to add loggings.
-
-Below are the libraries we included (ordered by number of stars on GitHub):
-
-- zustand
-- jotai
-- valtio
-- koota
-- manate
-
-## Conclusion
+We modified it to add some loggings.
