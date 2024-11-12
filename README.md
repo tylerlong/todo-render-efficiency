@@ -35,21 +35,30 @@ We add a `console.log` to the beginning of EVERY React component, for example `c
 6. Filter the list to only show complete todos
 7. Remove the filter to show all todos
 
-## Render Optimization Test
+## Render Optimization Test Rules
 
 In order to pass the render optimization test, the app must not do any unnecessary renders:
 
 ## test 1
 
-in step #3, create a new todo should not cause the existing 5 todos to re-render because they didn't change.
+In step #3, create a new todo should not cause the existing 5 todos to re-render because they didn't change.
 
 ## test 2
 
-in step #4, delete a todo should not cause the other 5 todos to re-render because they didn't change.
+In step #4, delete a todo should not cause the other 5 todos to re-render because they didn't change.
 
 ## test 3
 
-in step #4, mark a todo as complete should not cause the other 4 todos to re-render because they didn't change.
+In step #5, mark a todo as complete should not cause the other 4 todos to re-render because they didn't change.
+
+## test 4
+
+In step #6, filter the list to only show complete todos, should only only cause the list to re-render.None of the todos should re-render because they didn't change.
+Incomplete todos disappeared from screen so you should not render them. Complete todos didn't change so you should not re-render them.
+
+## test 5
+
+In step #7, remove the filter to show all todos, should only cause the list and incomplete todos to render. Complete todos stays in the list without any change, you should not re-render them.
 
 ## mores tests
 
