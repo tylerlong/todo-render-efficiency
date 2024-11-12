@@ -1,0 +1,45 @@
+{
+  "formKey": "CTyiNJEUStifBm/8gELdag/8",
+  "elements": [
+    {
+      "id": "CTyiNJEUStifBm/8gELdag/1",
+      "adjustX": 0,
+      "adjustY": 0,
+      "color": "#A8D5BA",
+      "hidden": false,
+      "type": "Circle",
+      "diameter": 360,
+      "__type": "Circle"
+    },
+    {
+      "id": "CTyiNJEUStifBm/8gELdag/5",
+      "adjustX": 330,
+      "adjustY": 330,
+      "color": "#6BBF59",
+      "hidden": false,
+      "type": "Icon",
+      "scale": 0.3,
+      "path": [
+        "ionicons",
+        "filled",
+        "leaf"
+      ],
+      "__type": "Icon"
+    },
+    {
+      "id": "CTyiNJEUStifBm/8gELdag/3",
+      "adjustX": 142,
+      "adjustY": 142,
+      "color": "#4A4A4A",
+      "hidden": false,
+      "type": "Icon",
+      "scale": 0.8,
+      "path": [
+        "material-icons",
+        "round",
+        "checklist"
+      ],
+      "__type": "Icon"
+    }
+  ]
+}
