@@ -11,6 +11,7 @@ Below are the libraries we included (ordered by number of stars on GitHub):
 - zustand
 - jotai
 - valtio
+  - [todo app](https://github.com/tylerlong/todo-state-management/tree/valtio)
 - koota
 
 For now all of them are from https://github.com/pmndrs. It's quite interesting to see a GitHub organization to release 4 state management libraries to "compete" with each other.
