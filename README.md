@@ -17,7 +17,7 @@ Below are the libraries we included (ordered by number of stars on GitHub):
 
 For now all of them are from https://github.com/pmndrs. It's quite interesting to see a GitHub organization to release 4 state management libraries to "compete" with each other.
 
-In the future, I will add more state management libraries. PRs are very welcome! To state management library authors: feel free to creaet a PR to add your library. It doesn't need to famous to added.
+In the future, I will add more state management libraries. PRs are very welcome! To state management library authors: feel free to creaet a PR to add your library. It doesn't need to be famous to be added.
 
 ## Common rules
 
@@ -41,24 +41,27 @@ In order to pass the render optimization test, the app must not do any unnecessa
 
 ## test 1
 
-In step #3, create a new todo should not cause the existing 5 todos to re-render because they didn't change.
+In step #3, create a new todo should **NOT** cause the existing 5 todos to re-render because they didn't change.
 
 ## test 2
 
-In step #4, delete a todo should not cause the other 5 todos to re-render because they didn't change.
+In step #4, delete a todo should **NOT** cause the other 5 todos to re-render because they didn't change.
 
 ## test 3
 
-In step #5, mark a todo as complete should not cause the other 4 todos to re-render because they didn't change.
+In step #5, mark a todo as complete should **NOT** cause the other 4 todos to re-render because they didn't change.
 
 ## test 4
 
-In step #6, filter the list to only show complete todos, should only only cause the list to re-render.None of the todos should re-render because they didn't change.
-Incomplete todos disappeared from screen so you should not render them. Complete todos didn't change so you should not re-render them.
+In step #6, filter the list to only show complete todos, should **ONLY** cause the list to re-render.
+**None** of the todos should re-render because they didn't change.
+Incomplete todos disappeared from screen so we should **NOT** render them.
+Complete todos didn't change so we should **NOT** re-render them.
 
 ## test 5
 
-In step #7, remove the filter to show all todos, should only cause the list and incomplete todos to render. Complete todos stays in the list without any change, you should not re-render them.
+In step #7, remove the filter to show all todos, should **ONLY** cause the list and incomplete todos to render.
+Complete todos stays in the list without any change, we should **NOT** re-render them.
 
 ## mores tests
 
