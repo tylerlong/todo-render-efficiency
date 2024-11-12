@@ -47,8 +47,10 @@ in step #4, delete a todo should not cause the other 5 todos to re-render becaus
 
 ## test 3
 
-in step #4, mark a todo as ccomplete should not cause the other 4 todos to re-render because they didn't change.
+in step #4, mark a todo as complete should not cause the other 4 todos to re-render because they didn't change.
 
 ## mores tests
 
 Just use some commons sense: if a component didn't change, we should not re-render it, period.
+
+In the mean time, we need to make sure the app behavior 100% correct. If a component changed (its output) and the app didn't re-render it, it is a **critical** bug.
