@@ -16,10 +16,30 @@ We add a `console.log` to EVERY component, for example `console.log("TodoRow ren
 
 For more details please refer to [Test procedure](https://github.com/tylerlong/todo-state-management?tab=readme-ov-file#test-procedure) and [Render Optimization Test](https://github.com/tylerlong/todo-state-management?tab=readme-ov-file#render-optimization-test).
 
-## Result
+## Result (passed 0 / 5)
 
-valtio failed the Render Optimization Test:
+valtio failed all the Render Optimization Tests:
 
-- create a new todo caused existing todos to re-render
-- delete a todo caused other todos to re-render
-- mark a todo as complete caused all todos to re-render
+### test 1 ❌
+
+In step #3, create a new todo should NOT cause the existing 5 todos to re-render because they didn't change.
+
+### test 2 ❌
+
+In step #4, delete a todo should NOT cause the other 5 todos to re-render because they didn't change.
+
+### test 3 ❌
+
+In step #5, mark a todo as complete should NOT cause the other 4 todos to re-render because they didn't change.
+
+### test 4 ❌
+
+In step #6, filter the list to only show complete todos, should ONLY cause the list to re-render.
+None of the todos should re-render because they didn't change.
+Incomplete todos disappeared from screen so we should NOT render them.
+Complete todos didn't change so we should NOT re-render them.
+
+### test 5 ❌
+
+In step #7, remove the filter to show all todos, should ONLY cause the list and incomplete todos to render.
+Complete todos stays in the list without any change, we should NOT re-render them.
