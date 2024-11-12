@@ -1,5 +1,7 @@
 # Todo Render Efficiency
 
+![icon](icon.svg)
+
 I've started this project, "Todo Render Efficiency," to compare different state management libraries and identify which ones best reduce unnecessary renders in a React todo app.
 
 ## Why This Matters
