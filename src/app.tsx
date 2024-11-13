@@ -32,7 +32,7 @@ const App = auto((props: { todoList: TodoList }) => {
 });
 
 const InputComponent = auto((props: { todoList: TodoList }) => {
-  console.log('render InputComponent');
+  // console.log('render InputComponent'); // intentionally commented out, since it will output a lot when typing
   const { todoList } = props;
   const [text, setText] = React.useState('');
   return (
