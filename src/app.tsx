@@ -50,19 +50,7 @@ const InputComponent = () => {
 
 const TodoListComponent = () => {
   console.log('render TodoListComponent');
-  const todos = useStore((state) => state.todos);
-  const filter = useStore((state) => state.filter);
-
-  const visibleTodos = React.useMemo(() => {
-    switch (filter) {
-      case 'complete':
-        return todos.filter((todo) => todo.done);
-      case 'incomplete':
-        return todos.filter((todo) => !todo.done);
-      default:
-        return todos;
-    }
-  }, [todos, filter]); // Only recompute when todos or filter changes
+  const visibleTodos = useStore((state) => state.visibleTodos());
   return (
     <Space direction="vertical">
       {visibleTodos.map((todo) => (
@@ -75,7 +63,6 @@ const TodoListComponent = () => {
 // eslint-disable-next-line react/display-name
 const TodoComponent = React.memo(({ todo }: { todo: Todo }) => {
   console.log('render TodoComponent');
-  // const todo = useStore((state) => state.todos.find((t) => t.id === id))!;
   const toggleTodo = useStore((state) => state.toggleTodo);
   const deleteTodo = useStore((state) => state.deleteTodo);
   return (
