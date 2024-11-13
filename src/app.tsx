@@ -49,8 +49,17 @@ const InputComponent = () => {
 };
 
 const TodoListComponent = () => {
-  const getVisibleTodos = useStore((state) => state.getVisibleTodos);
-  const visibleTodos = getVisibleTodos();
+  const visibleTodos = useStore((state) => {
+    const { filter, todos } = state;
+    switch (filter) {
+      case 'complete':
+        return todos.filter((todo) => todo.done);
+      case 'incomplete':
+        return todos.filter((todo) => !todo.done);
+      default:
+        return todos;
+    }
+  });
   return (
     <Space direction="vertical">
       {visibleTodos.map((todo) => (

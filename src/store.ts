@@ -18,10 +18,9 @@ type TodoState = {
   toggleTodo: (id: string) => void;
   deleteTodo: (id: string) => void;
   setFilter: (filter: Filter) => void;
-  getVisibleTodos: () => Todo[];
 };
 
-export const useStore = create<TodoState>((set, get) => ({
+export const useStore = create<TodoState>((set) => ({
   filter: 'all',
   todos: [],
   addTodo: (text: string) =>
@@ -37,15 +36,4 @@ export const useStore = create<TodoState>((set, get) => ({
   deleteTodo: (id: string) =>
     set((state) => ({ todos: state.todos.filter((todo) => todo.id !== id) })),
   setFilter: (filter: Filter) => set({ filter }),
-  getVisibleTodos: () => {
-    const { filter, todos } = get();
-    switch (filter) {
-      case 'complete':
-        return todos.filter((todo) => todo.done);
-      case 'incomplete':
-        return todos.filter((todo) => !todo.done);
-      default:
-        return todos;
-    }
-  },
 }));
