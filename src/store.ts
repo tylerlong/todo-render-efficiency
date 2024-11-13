@@ -1,5 +1,9 @@
 import hyperid from 'hyperid';
-import { makeAutoObservable } from 'mobx';
+import { configure, makeAutoObservable } from 'mobx';
+
+configure({
+  enforceActions: 'never',
+});
 
 const uuid = hyperid();
 
