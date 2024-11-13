@@ -1,5 +1,6 @@
 import * as React from "react";
 import { actions, filters, Todo, useFilter, useTodos } from "./store";
+import { memo } from "react";
 
 function App() {
   console.log("App render");
@@ -46,7 +47,7 @@ function TodoList() {
   );
 }
 
-function TodoRow({ todo }: { todo: Todo }) {
+const TodoRow = memo(function TodoRow({ todo }: { todo: Todo }) {
   console.log("TodoRow render");
   function handleCheckBoxChange(event: React.ChangeEvent<HTMLInputElement>) {
     actions.toggleTodo(todo.id, event.target.checked);
@@ -71,7 +72,7 @@ function TodoRow({ todo }: { todo: Todo }) {
       </h2>
     </div>
   );
-}
+});
 
 function FilterRow() {
   console.log("FilterRow render");

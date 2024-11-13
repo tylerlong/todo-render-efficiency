@@ -22,10 +22,12 @@ yarn dev
 
 For test rules and details, please go to the <a href="https://github.com/tylerlong/todo-state-management" target="_blank">main branch</a>.
 
-## Result (passed 0 / 5)
+## Result (passed 4 / 5)
 
-- test 1 ❌
-- test 2 ❌
+- test 1 ✅
+- test 2 ✅
 - test 3 ❌
-- test 4 ❌
-- test 5 ❌
+- test 4 ✅
+- test 5 ✅
+
+In test 3, toggle a todo as complete should **NOT** cause TodoList to re-render.
