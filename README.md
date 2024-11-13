@@ -36,6 +36,7 @@ What’s your favorite state management library, and why do you choose it? We’
 We disable `<StrictMode>`, because it's for development. We would like to evaluation behaviors for production.
 
 We add a `console.log` to the beginning of EVERY React component, for example `console.log("<ComponentName> render");`. So that we can evaluate the render optimization.
+An exception is pure form/input components. We don't add `console.log` to them since it will output a lot when typing. And it is by design to re-render a lot.
 
 ## Testing rules
 
