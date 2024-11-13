@@ -49,8 +49,10 @@ const InputComponent = () => {
 };
 
 const TodoListComponent = () => {
-  const visibleTodos = useStore((state) => {
-    const { filter, todos } = state;
+  const todos = useStore((state) => state.todos);
+  const filter = useStore((state) => state.filter);
+
+  const visibleTodos = React.useMemo(() => {
     switch (filter) {
       case 'complete':
         return todos.filter((todo) => todo.done);
@@ -59,7 +61,7 @@ const TodoListComponent = () => {
       default:
         return todos;
     }
-  });
+  }, [todos, filter]); // Only recompute when todos or filter changes
   return (
     <Space direction="vertical">
       {visibleTodos.map((todo) => (
