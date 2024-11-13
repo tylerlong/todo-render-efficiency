@@ -47,32 +47,30 @@ If a component changed (its output) and the app didn't re-render it, it is a **c
 
 ## Preparation
 
-- Create 5 todos with text "todo #1", "todo #2", "todo #3", "todo #4", "todo #5".
+- Create 5 todos with text "1", "2", "3", "4", "5".
 - Open browser console
 - Clear browser console
 - Watch browser console for the tests below
 
 ## test 1
 
-Create a new todo with text "todo #6".
+Create a new todo with text "6".
 
 It should **NOT** cause the existing 5 todos to re-render because they didn't change.
 
 ## test 2
 
-Delete the todo with text "todo #1".
+Delete the todo with text "1".
 
 It should **NOT** cause the other 5 todos to re-render because they didn't change.
 
 ## test 3
 
-Mark the todo with text "todo #3" as complete.
+Mark the todo with text "4" as complete.
 
 It should **NOT** cause the other 4 todos to re-render because they didn't change.
-
-Mark the todo with text "todo #4" as complete.
-
-It should **NOT** cause the other 4 todos to re-render because they didn't change.
+It should **NOT** cause the list component to re-render since it didn't change.
+A todo inside the list changed, you just re-render the changed todo, there is not need to re-render the list.
 
 ## test 4
 
