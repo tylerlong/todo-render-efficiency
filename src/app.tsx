@@ -1,35 +1,14 @@
-import { Button, Space, Typography } from 'antd';
-import { auto } from 'manate/react';
+import { Typography } from 'antd';
 import React from 'react';
 
-import { Store } from './store';
+const { Title } = Typography;
 
-const { Text, Title } = Typography;
-
-const App = auto((props: { store: Store }) => {
-  const { store } = props;
+const App = () => {
   return (
     <>
-      <Title>Untitled App</Title>
-      <Space>
-        <Button
-          onClick={() => {
-            store.count -= 1;
-          }}
-        >
-          -
-        </Button>
-        <Text>{store.count}</Text>
-        <Button
-          onClick={() => {
-            store.count += 1;
-          }}
-        >
-          +
-        </Button>
-      </Space>
+      <Title>Zustand Todo List</Title>
     </>
   );
-});
+};
 
 export default App;
