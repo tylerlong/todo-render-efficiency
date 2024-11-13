@@ -30,4 +30,4 @@ For test rules and details, please go to the <a href="https://github.com/tylerlo
 - test 4 ✅
 - test 5 ✅
 
-In test 3, toggle a todo as complete should **NOT** cause TodoList to re-render.
+In test 3, toggle a todo as complete should **NOT** cause `TodoList` to re-render.

@@ -15,7 +15,7 @@ function App() {
 }
 
 function AddTodoInput() {
-  console.log("AddTodoInput render");
+  // console.log("AddTodoInput render"); // intentioanlly commented out, it will output a lot when typing
   const [value, setValue] = React.useState("");
 
   function handleSubmit() {
