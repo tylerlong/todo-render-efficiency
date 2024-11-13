@@ -16,7 +16,7 @@ We haven’t finished testing all the libraries yet. It’s a work in progress.
   - passed 4/5 tests ❌
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/zustand)
 - [jotai](https://github.com/pmndrs/jotai)
-  - passed 1/5 tests ❌
+  - passed 5/5 tests ✅
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/jotai)
 - [valtio](https://github.com/pmndrs/valtio)
   - passed 4/5 tests ❌
