@@ -49,6 +49,7 @@ const InputComponent = () => {
 };
 
 const TodoListComponent = () => {
+  console.log('render TodoListComponent');
   const todos = useStore((state) => state.todos);
   const filter = useStore((state) => state.filter);
 
@@ -71,8 +72,10 @@ const TodoListComponent = () => {
   );
 };
 
-const TodoComponent = ({ todo }: { todo: Todo }) => {
+// eslint-disable-next-line react/display-name
+const TodoComponent = React.memo(({ todo }: { todo: Todo }) => {
   console.log('render TodoComponent');
+  // const todo = useStore((state) => state.todos.find((t) => t.id === id))!;
   const toggleTodo = useStore((state) => state.toggleTodo);
   const deleteTodo = useStore((state) => state.deleteTodo);
   return (
@@ -89,7 +92,7 @@ const TodoComponent = ({ todo }: { todo: Todo }) => {
       </Button>
     </Space>
   );
-};
+});
 
 const FilterComponent = () => {
   console.log('render FilterComponent');
