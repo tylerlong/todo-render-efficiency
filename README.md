@@ -13,7 +13,8 @@ Reducing extra re-renders saves power, making apps more efficient and eco-friend
 We haven’t finished testing all the libraries yet. It’s a work in progress.
 
 - [zustand](https://github.com/pmndrs/zustand)
-  - haven't tested
+  - passed 4/5 tests
+  - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/zustand)
 - [jotai](https://github.com/pmndrs/jotai)
   - passed 1/5 tests ❌
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/jotai)
