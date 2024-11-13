@@ -30,7 +30,7 @@ const App = () => {
 };
 
 const InputComponent = () => {
-  console.log('render InputComponent');
+  // console.log('render InputComponent'); // intentionally commented out, otherwise it will output a lot when typing
   const [text, setText] = React.useState('');
   const addTodo = useStore((state) => state.addTodo);
   return (
