@@ -24,7 +24,7 @@ yarn start
 
 For test rules and details, please go to the <a href="https://github.com/tylerlong/todo-state-management" target="_blank">main branch</a>.
 
-## Result (passed 1 / 5)
+## Result (passed 5 / 5)
 
 - test 1 ✅
 - test 2 ✅
