@@ -31,3 +31,4 @@ For test rules and details, please go to the <a href="https://github.com/tylerlo
 - test 5 ✅
 
 In test 3, toggle a todo as complete should **NOT** cause `TodoList` to re-render.
+There is a workaround, but it will cause performance issue: https://github.com/pmndrs/valtio/discussions/998.
