@@ -1,6 +1,5 @@
-import type { FormEvent } from "react";
+import React from "react";
 import { CloseOutlined } from "@ant-design/icons";
-import { a, useTransition } from "@react-spring/web";
 import { Radio } from "antd";
 import { Provider, atom, useAtom, useSetAtom } from "jotai";
 import type { PrimitiveAtom } from "jotai";
@@ -26,7 +25,7 @@ type TodoItemProps = {
   atom: PrimitiveAtom<Todo>;
   remove: RemoveFn;
 };
-const TodoItem = ({ atom, remove }: TodoItemProps) => {
+const TodoItem = React.memo(({ atom, remove }: TodoItemProps) => {
   console.log("render TodoItem");
   const [item, setItem] = useAtom(atom);
   const toggleCompleted = () =>
@@ -44,7 +43,7 @@ const TodoItem = ({ atom, remove }: TodoItemProps) => {
       <CloseOutlined onClick={() => remove(atom)} />
     </>
   );
-};
+});
 
 const Filter = () => {
   console.log("render Filter");
@@ -64,17 +63,9 @@ type FilteredType = {
 const Filtered = (props: FilteredType) => {
   console.log("render Filtered");
   const [todos] = useAtom(filteredAtom);
-  const transitions = useTransition(todos, {
-    keys: (todo) => todo.toString(),
-    from: { opacity: 0, height: 0 },
-    enter: { opacity: 1, height: 40 },
-    leave: { opacity: 0, height: 0 },
-  });
-  return transitions((style, atom) => (
-    <a.div className="item" style={style}>
-      <TodoItem atom={atom} {...props} />
-    </a.div>
-  ));
+  return <>{todos.map((atom) => (
+    <TodoItem key={atom.toString()} atom={atom} {...props} />
+  ))}</>;
 };
 
 const TodoList = () => {
@@ -84,7 +75,7 @@ const TodoList = () => {
   const setTodos = useSetAtom(todosAtom);
   const remove: RemoveFn = (todo) =>
     setTodos((prev) => prev.filter((item) => item !== todo));
-  const add = (e: FormEvent<HTMLFormElement>) => {
+  const add = (e: any) => {
     e.preventDefault();
     const title = e.currentTarget.inputTitle.value;
     e.currentTarget.inputTitle.value = "";

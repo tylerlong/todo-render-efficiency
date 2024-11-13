@@ -9,6 +9,10 @@ We added `NODE_OPTIONS=--openssl-legacy-provider` otherwise it won't start with 
 
 We add a console.log to EVERY component, for example `console.log('render TodoItem')`
 
+We applied `React.memo` to TodoItem.
+
+We removed transition from `Filtered` since animation will cause lots of re-render.
+
 ## How to run
 
 ```
@@ -22,8 +26,8 @@ For test rules and details, please go to the <a href="https://github.com/tylerlo
 
 ## Result (passed 1 / 5)
 
-- test 1 ❌
-- test 2 ❌
+- test 1 ✅
+- test 2 ✅
 - test 3 ✅
-- test 4 ❌
-- test 5 ❌
+- test 4 ✅
+- test 5 ✅
