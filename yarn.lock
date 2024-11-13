@@ -1169,6 +1169,22 @@
     posthtml-render "^3.0.0"
     semver "^7.5.2"
 
+"@parcel/transformer-typescript-tsc@^2.13.0":
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-typescript-tsc/-/transformer-typescript-tsc-2.13.0.tgz#ad9b1f9c0f7cbd1f887d2f2acf3d12b941861c8b"
+  integrity sha512-ohQ6dVDJ9yzoS3iMhjjv+470cbNqmYBesYZKc6mmrmMaPN5K/ROXUjwLNgoWpQhrPbrv+NwKD77Ag4krokSIIA==
+  dependencies:
+    "@parcel/plugin" "2.13.0"
+    "@parcel/source-map" "^2.1.1"
+    "@parcel/ts-utils" "2.13.0"
+
+"@parcel/ts-utils@2.13.0":
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/@parcel/ts-utils/-/ts-utils-2.13.0.tgz#3e0d8db50ce4c3309f73e63bf80a8d1b0dd22333"
+  integrity sha512-Y3jpU9tmyZHGlkDZY01Kj2uqYkaxZSdPRvZ+zNNzyhC9cSDOeJiu5w6clN8LsCie/BNbjFzXt43OFK7oaL9IGA==
+  dependencies:
+    nullthrows "^1.1.1"
+
 "@parcel/types-internal@2.13.0":
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/@parcel/types-internal/-/types-internal-2.13.0.tgz#03dd20c3fbd638f1aa91b70e82ba501bd4e77c3c"
@@ -3874,6 +3890,11 @@ prettier@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.3.3.tgz#30c54fe0be0d8d12e6ae61dbb10109ea00d53105"
   integrity sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==
+
+process@^0.11.10:
+  version "0.11.10"
+  resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
+  integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 
 prop-types@^15.8.1:
   version "15.8.1"

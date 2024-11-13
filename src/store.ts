@@ -3,7 +3,7 @@ import { create } from 'zustand';
 
 const uuid = hyperid();
 
-type Todo = {
+export type Todo = {
   id: string;
   text: string;
   done: boolean;
@@ -17,6 +17,7 @@ type TodoState = {
   addTodo: (text: string) => void;
   toggleTodo: (id: string) => void;
   deleteTodo: (id: string) => void;
+  setFilter: (filter: Filter) => void;
   getVisibleTodos: () => Todo[];
 };
 
@@ -35,6 +36,7 @@ export const useStore = create<TodoState>((set, get) => ({
     })),
   deleteTodo: (id: string) =>
     set((state) => ({ todos: state.todos.filter((todo) => todo.id !== id) })),
+  setFilter: (filter: Filter) => set({ filter }),
   getVisibleTodos: () => {
     const { filter, todos } = get();
     switch (filter) {
