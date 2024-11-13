@@ -10,8 +10,6 @@ Reducing extra re-renders saves power, making apps more efficient and eco-friend
 
 ## Testing results (ordered by number of stars on GitHub)
 
-We haven’t finished testing all the libraries yet. It’s a work in progress.
-
 - [zustand](https://github.com/pmndrs/zustand)
   - passed 4/5 tests ❌
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/zustand)
@@ -72,7 +70,7 @@ Mark the todo with text "4" as complete.
 
 It should **NOT** cause the other 4 todos to re-render because they didn't change.
 It should **NOT** cause the list component to re-render since it didn't change.
-A todo inside the list changed, you just re-render the changed todo, there is not need to re-render the list.
+A todo inside the list changed, you just re-render the changed todo, there is no need to re-render the list.
 
 ## test 4
 
