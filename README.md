@@ -9,6 +9,8 @@ We disabled `<StrictMode>`, because it's for development only. We would like to 
 
 We add a key to `FilterRow` buttons list, otherwise React will complain.
 
+We add `React.memo` to TodoRow, otherwise it will render a lot.
+
 ## How to run
 
 ```
