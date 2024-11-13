@@ -9,15 +9,18 @@
     "serve": "rm -rf .parcel-cache temp && parcel src/index.html --dist-dir temp"
   },
   "devDependencies": {
+    "@parcel/transformer-typescript-tsc": "^2.13.0",
     "@types/node": "^22.9.0",
     "@types/react-dom": "^18.3.1",
     "antd": "^5.22.0",
     "dotenv-override-true": "^6.2.2",
     "eslint-config-tyler": "^0.2.1",
     "gh-pages": "^6.2.0",
+    "hyperid": "^3.3.0",
     "mobx": "^6.13.5",
     "mobx-react-lite": "^4.0.7",
     "parcel": "^2.13.0",
+    "process": "^0.11.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sort-package-json": "^2.10.1",

@@ -1,9 +1,43 @@
-import { manage } from 'manate';
+import hyperid from 'hyperid';
+import { makeAutoObservable } from 'mobx';
 
-export class Store {
-  public count = 0;
+const uuid = hyperid();
+
+export class Todo {
+  public id = uuid();
+  public done = false;
+
+  public constructor(public text: string) {
+    makeAutoObservable(this);
+  }
+
+  public remove() {
+    todoList.todos = todoList.todos.filter((todo) => todo !== this);
+  }
 }
 
-const store = manage(new Store());
+export class TodoList {
+  public todos: Todo[] = [];
+  public filter: 'all' | 'complete' | 'incomplete' = 'all';
 
-export default store;
+  public constructor() {
+    makeAutoObservable(this);
+  }
+
+  public get filteredTodos() {
+    switch (this.filter) {
+      case 'complete':
+        return this.todos.filter((todo) => todo.done);
+      case 'incomplete':
+        return this.todos.filter((todo) => !todo.done);
+      default:
+        return this.todos;
+    }
+  }
+
+  public add(text: string) {
+    this.todos.push(new Todo(text));
+  }
+}
+
+export const todoList = new TodoList();
