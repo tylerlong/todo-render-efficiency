@@ -13,6 +13,8 @@ Reducing extra re-renders saves power, making apps more efficient and eco-friend
 - [zustand](https://github.com/pmndrs/zustand)
   - passed 4/5 tests ❌
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/zustand)
+- [mobx](https://github.com/mobxjs/mobx)
+  - haven't been tested
 - [jotai](https://github.com/pmndrs/jotai)
   - passed 5/5 tests ✅
   - [run the test yourself](https://github.com/tylerlong/todo-state-management/tree/jotai)
